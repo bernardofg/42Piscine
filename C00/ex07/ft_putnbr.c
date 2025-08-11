@@ -31,6 +31,7 @@ void ft_putnbr(int nb)
         nb = nb % 10 + '0';
         write (1, &nb, 1);
 }
+/*
 #include <stdio.h>
 
 int main(void)
@@ -38,3 +39,4 @@ int main(void)
     int nb = 341;
     ft_putnbr(nb);
 }
+*/
