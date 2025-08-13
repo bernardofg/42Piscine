@@ -21,6 +21,7 @@ void	ft_print_alphabet(void)
 	{
 		write(1, &letter, 1);
         letter++;
+		teste
 	}
 }
 
