@@ -1,0 +1,36 @@
+starting from the left until one of them does not match or the end of a string has been reached. There are three possible scenarios:
+
+strcmp() function -- compare two strings to see if:
+
+str1 == str2 -> return (0);
+
+str1 > str2 -> return (positive / str1 - str2 returns a positive number from ASCII table)
+
+str1 < str2 -> return (negative / str1 - str2 returns a negative number from ASCII table)
+
+
+
+strncmp - compare two strings but with (n) demilitando:
+
+same as strcmp 
+
+n =  If n comparisons have been made without any mismatches then the function returns zero.
+
+
+
+The strcat() function appends a copy of one string to the end of another.
+
+overwriting the terminating null byte ('\0') at the end of dest, and then adds a terminating null byte.
+
+dest[i] e src[j]
+
+src[j] vai parar no '\0' de dest ou seja
+
+dest[i] = src[j]
+i++
+j++
+
+i de (dest) e igual a nulo
+j e a primeira letra de src
+
+++ para ambos p/ ir indo para a proxima letra e colocando a proxima letra de src em dest.
