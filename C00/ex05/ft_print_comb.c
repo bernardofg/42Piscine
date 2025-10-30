@@ -3,52 +3,47 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bfantine <bfantine@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bfantine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/11 15:40:09 by bfantine          #+#    #+#             */
-/*   Updated: 2025/08/11 15:40:09 by bfantine         ###   ########.fr       */
+/*   Created: 2025/07/19 11:41:01 by bfantine          #+#    #+#             */
+/*   Updated: 2025/07/20 13:48:56 by bfantine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 
-void    ft_putchar(char c)
-{
-    write (1, &c, 1);
-}
-void    ft_print_comb(void)
-{
-    char    a;
-    char    b;
-    char    c;
+void	ft_print_comb(void);
 
-    a = '0';
-    while (a <= '7')
-    {
-        b = a + 1;
-        while (b <= '8')
-        {
-            c = b + 1;
-            while (c <= '9')
-            {
-                ft_putchar(a);
-                ft_putchar(b);
-                ft_putchar(c);
-                if (!(a == '7'))
-                {
-                    write (1, ", ", 2);
-                }
-                c++;
-            }
-            b++;
-        }
-        a++;
-    }
+void	ft_print_comb(void)
+{
+	char	i;
+	char	j;
+	char	k;
+
+	i = '0';
+	while (i <= '7')
+	{
+		j = i + 1;
+		while (j <= '8')
+		{
+			k = j + 1;
+			while (k <= '9')
+			{
+				write(1, &i, 1);
+				write(1, &j, 1);
+				write(1, &k, 1);
+				if (!(i == '7' && j == '8' && k == '9'))
+					write(1, ",  ", 2);
+				k++;
+			}
+			j++;
+		}
+		i++;
+	}
 }
 /*
-int main(void)
+int	main(void)
 {
-    ft_print_comb();
-    return (0);
+	ft_print_comb();
+	return (0);
 }
 */

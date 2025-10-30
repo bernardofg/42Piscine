@@ -1,50 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfantine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/20 14:06:43 by bfantine          #+#    #+#             */
-/*   Updated: 2025/08/06 17:56:15 by bfantine         ###   ########.fr       */
+/*   Created: 2025/07/18 12:48:02 by bfantine          #+#    #+#             */
+/*   Updated: 2025/07/22 20:28:12 by bfantine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_swap(int *a, int *b)
 {
-	write (1, &c, 1);
-}
+	int	temp;
 
-void	ft_print_comb2(void)
-{
-	char	a;
-	char	b;
-
-	a = 0;
-	while (a < 99)
-	{
-		b = a + 1;
-		while (b < 100)
-		{
-			ft_putchar (a / 10 + '0');
-			ft_putchar (a % 10 + '0');
-			ft_putchar (' ');
-			ft_putchar (b / 10 + '0');
-			ft_putchar (b % 10 + '0');
-			if (a / 10 != 9 || a % 10 != 8)
-			{
-				write(1, ",  ", 2);
-			}
-			b++;
-		}
-		a++;
-	}
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
 /*
-int	main(void)
+int main(void)
 {
-	ft_print_comb2();
+	int x = '2';
+	int y = '3';
+	ft_swap(&x, &y); //Pass the address of x and y to the ft_swap function
+	write(1, &x, 1);
+	write(1, &y, 1);
 	return (0);
 }
 */

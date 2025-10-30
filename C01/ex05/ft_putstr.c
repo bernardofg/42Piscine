@@ -1,50 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfantine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/20 14:06:43 by bfantine          #+#    #+#             */
-/*   Updated: 2025/08/06 17:56:15 by bfantine         ###   ########.fr       */
+/*   Created: 2025/07/19 13:56:42 by bfantine          #+#    #+#             */
+/*   Updated: 2025/07/23 23:34:50 by bfantine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putstr(char *str)
 {
-	write (1, &c, 1);
-}
+	int	i;
 
-void	ft_print_comb2(void)
-{
-	char	a;
-	char	b;
-
-	a = 0;
-	while (a < 99)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		b = a + 1;
-		while (b < 100)
-		{
-			ft_putchar (a / 10 + '0');
-			ft_putchar (a % 10 + '0');
-			ft_putchar (' ');
-			ft_putchar (b / 10 + '0');
-			ft_putchar (b % 10 + '0');
-			if (a / 10 != 9 || a % 10 != 8)
-			{
-				write(1, ",  ", 2);
-			}
-			b++;
-		}
-		a++;
+		write(1, &str[i], 1);
+		i++;
 	}
 }
 /*
-int	main(void)
+int main()
 {
-	ft_print_comb2();
-	return (0);
+    char *str = "hello, world!\n";
+
+    ft_putstr(str);
+
+    return 0;
 }
 */

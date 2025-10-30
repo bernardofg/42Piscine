@@ -3,22 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bfantine <bfantine@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bfantine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/11 15:00:47 by bfantine          #+#    #+#             */
-/*   Updated: 2025/08/11 15:00:47 by bfantine         ###   ########.fr       */
+/*   Created: 2025/07/18 11:18:35 by bfantine          #+#    #+#             */
+/*   Updated: 2025/07/20 13:47:16 by bfantine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
+#include <unistd.h> 
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-
-/* int	main(void)
-{
-	ft_putchar('a');
+/*
+int	main(void)
+	ft_putchar('b');
 	return (0);
-} */
+}
+*/

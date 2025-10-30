@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bfantine <bfantine@student.42porto.co      +#+  +:+       +#+        */
+/*   By: bfantine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/04 22:06:20 by bfantine          #+#    #+#             */
-/*   Updated: 2025/08/06 21:34:10 by bfantine         ###   ########.fr       */
+/*   Created: 2025/07/19 13:17:52 by bfantine          #+#    #+#             */
+/*   Updated: 2025/07/23 23:29:22 by bfantine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char	ft_strlen(char *str)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	*div = a / b;
+	*mod = a % b;
 }
-
-char	*ft_strdup(char *src)
+/*
+#include <stdio.h>
+int main()
 {
-	int		i;
-	char	*str;
+    int div, mod;
+    ft_div_mod(10, 3, &div, &mod);
 
-	i = 0;
-	str = malloc (ft_strlen(src));
-	while (str[i] != '0')
-	{
-		str[i] = src[i];
-		i++;
-	}
-	return (str);
-}
+    printf("Div: %d\n", div);
+    printf("Mod: %d\n", mod);
+
+    return 0;
+}*/

@@ -1,30 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfantine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 12:01:05 by bfantine          #+#    #+#             */
-/*   Updated: 2025/07/18 20:38:38 by bfantine         ###   ########.fr       */
+/*   Created: 2025/07/18 12:32:42 by bfantine          #+#    #+#             */
+/*   Updated: 2025/07/22 11:33:14 by bfantine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
 
-void	ft_is_negative(int n)
+void	ft_ft(int *nbr) //*nbr returns a integer(42)
 {
-	if (n >= 0)
-	{
-		write (1, "P", 1);
-	}
-	else
-	{
-		write (1, "N", 1);
-	}
+	*nbr = 42;
 }
-
-/*int	main(void)
-{
-	ft_is_negative();
-	return (0);
-}*/

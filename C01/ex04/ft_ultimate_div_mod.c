@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfantine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 12:01:05 by bfantine          #+#    #+#             */
-/*   Updated: 2025/07/18 20:38:38 by bfantine         ###   ########.fr       */
+/*   Created: 2025/07/19 13:27:42 by bfantine          #+#    #+#             */
+/*   Updated: 2025/07/23 23:29:57 by bfantine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
-
-void	ft_is_negative(int n)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	if (n >= 0)
-	{
-		write (1, "P", 1);
-	}
-	else
-	{
-		write (1, "N", 1);
-	}
+	int	temp;
+
+	temp = *a;
+	*a = *a / *b;
+	*b = temp % *b;
 }
-
-/*int	main(void)
+/*
+int main()
 {
-	ft_is_negative();
-	return (0);
+    int a = 42;
+    int b = 5;
+
+    printf("Antes da função:\n");
+    printf("a = %d, b = %d\n", a, b);
+
+    ft_ultimate_div_mod(&a, &b);
+
+    printf("\nDepois da função:\n");
+    printf("a = %d, b = %d\n", a, b);
+
+    return 0;
 }*/

@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfantine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 12:01:05 by bfantine          #+#    #+#             */
-/*   Updated: 2025/07/18 20:38:38 by bfantine         ###   ########.fr       */
+/*   Created: 2025/07/19 14:52:06 by bfantine          #+#    #+#             */
+/*   Updated: 2025/07/23 23:31:01 by bfantine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
-
-void	ft_is_negative(int n)
+int	ft_strlen(char *str)
 {
-	if (n >= 0)
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		write (1, "P", 1);
+		i++;
 	}
-	else
-	{
-		write (1, "N", 1);
-	}
+	return (i);
 }
-
-/*int	main(void)
+/*
+#include <stdio.h>
+int main()
 {
-	ft_is_negative();
-	return (0);
-}*/
+    char *str = "Hello, world!";
+
+    int length = ft_strlen(str);
+
+    printf("O comprimento da string \"%s\" é: %d\n", str, length);
+
+    return (0);
+}
+*/
